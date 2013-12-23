@@ -1,0 +1,19 @@
+This code works as intended, and implements both extra features.
+
+For testing, simply:
+	make clean
+	make bridge
+
+	bridge [NUMBER_OF_CARS_TO_CROSS] [MAX_LOAD_OF_BRIDGE]
+
+	The output should demonstrate the code works.
+
+You can also make test, which runs the test cases that I used in order.
+
+RACE CONDITIONS I AVOIDED:
+	COLLISIONS
+		- My synchronization prevented cars that are going opposite directions
+		  from being on the bridge at the same time.
+	TOO MANY CARS
+		- My synchronization prevented too many cars (> MAX_LOAD) from being on
+		  the bridge at the same time.
